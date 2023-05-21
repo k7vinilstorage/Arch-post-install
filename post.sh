@@ -22,8 +22,8 @@ echo "apps"
 pacman -S code gnome-boxes gparted zsh discord fuse gcc gdb os-prober cifs-utils neofetch
 yay -S google-chrome code-marketplace update grub
 
-echo "--enable-features=WebUIDarkMode" >> ~/.config/{chrome,chromium}-flags.conf
-echo "--force-dark-mode" >> ~/.config/{chrome,chromium}-flags.conf
+echo "--enable-features=WebUIDarkMode" >> ~/.config/chrome-flags.conf
+echo "--force-dark-mode" >> ~/.config/chrome-flags.conf
 
 #Grub
 
