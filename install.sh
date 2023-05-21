@@ -80,6 +80,4 @@ nano ~/.zshrc
 
 sudo pacman -Rns gnome-contacts gnome-weather gnome-clocks htop cheese gnome-maps epiphany vim --noconfirm
 
-
-
 neofetch
