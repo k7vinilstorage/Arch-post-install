@@ -7,7 +7,7 @@ sudo pacman -Syu --noconfirm
 
 echo "Installing yay"
 
-sudo pacman -S --needed git base-devel --noconfirm && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -S --needed git base-devel --noconfirm && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 cd ~/
 
 #Bluetooth toools + audio formware
@@ -35,7 +35,7 @@ git clone https://github.com/k7vinilstorage/Arch-Grub.git
 cd Arch-Grub
 cd xenlism-grub-arch-1080p
 sudo sh install.sh
-cd ..
+cd ~/
 rm -rf Arch-Grub
 
 #themes
@@ -47,49 +47,34 @@ git clone https://github.com/k7vinilstorage/ArchSur-cursors.git
 #Shell
 cd Arch-Sur
 ./install.sh -n ArchSur -t orange -p 30 -s 180 -i arch -m -l -HD --round --darker
-cd ..
+cd ~/
 rm -rf Arch-Sur
 
 cd ArchSur-icon
 ./install.sh -n ArchSur -t orange
-cd ..
+cd ~/
 rm -rf ArchSur-icon
 
 cd ArchSur-cursors
 ./install.sh
-cd ..
+cd ~/
 rm -rf ArchSur-cursors
 
 #terminal
 
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
+git clone https://github.com/k7vinilstorage/Arch-fonts.git --depth=1
+cd Arch-fonts
 ./install.sh
 cd ..
-rm -rf fonts
+rm -rf Arch-fonts
 
-sudo mkdir $ZSH_CUSTOM/themes
-wget -O $ZSH_CUSTOM/themes/pi.zsh-theme https://raw.githubusercontent.com/tobyjamesthomas/pi/master/pi.zsh-theme
+sudo mkdir ~/.oh-my-zsh/custom/themes
+wget -O ~/.oh-my-zsh/custom/themes/pi.zsh-theme https://raw.githubusercontent.com/k7vinilstorage/Arch-zsh-theme/master/pi.zsh-theme
 
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 echo "Now enable pi theme"
+sleep 5s
 nano ~/.zshrc
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+neofetch
