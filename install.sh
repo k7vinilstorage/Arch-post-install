@@ -80,4 +80,14 @@ nano ~/.zshrc
 
 sudo pacman -Rns gnome-contacts gnome-weather gnome-clocks htop cheese gnome-maps epiphany vim --noconfirm
 
+sudo cp -r ~/.themes/* /usr/share/themes
+sudo cp -r ~/.local/share/icons/* /usr/share/icons
+
 neofetch
+sleep 3s
+
+echo "Now configure GDM and intall extensions"
+echo "Blur my shell, Caffeine"
+echo "Clipboard History, Dash to dock"
+echo "GSConnect, Quick Settings Audio Panel"
+echo "Tray Icons Reloaded"
