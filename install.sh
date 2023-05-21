@@ -56,7 +56,7 @@ cd ~/
 rm -rf ArchSur-icon
 
 cd ArchSur-cursors
-./install.sh
+./install.sh -n ArchSur
 cd ~/
 rm -rf ArchSur-cursors
 
@@ -68,13 +68,18 @@ cd Arch-fonts
 cd ..
 rm -rf Arch-fonts
 
-sudo mkdir ~/.oh-my-zsh/custom/themes
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
 wget -O ~/.oh-my-zsh/custom/themes/pi.zsh-theme https://raw.githubusercontent.com/k7vinilstorage/Arch-zsh-theme/master/pi.zsh-theme
 
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+echo "alias yay-clean="yay -Sc && yay -Qtdq | yay -Rns -"" >> ~/.zshrc
 
 echo "Now enable pi theme"
 sleep 5s
 nano ~/.zshrc
+
+sudo pacman -Rns gnome-contacts gnome-weather gnome-clocks htop cheese gnome-maps epiphany vim --noconfirm
+
+
 
 neofetch
