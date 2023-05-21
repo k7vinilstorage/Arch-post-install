@@ -20,7 +20,7 @@ sudo pacman -S sof-firmware alsa-firmware bluez bluez-libs --noconfirm
 echo "apps"
 
 sudo pacman -S code gnome-boxes gparted zsh discord fuse gcc gdb os-prober cifs-utils neofetch --noconfirm
-yay -S google-chrome code-marketplace update-grub --noconfirm
+yay -S google-chrome code-marketplace update-grub gdm-settings --noconfirm
 
 echo "--enable-features=WebUIDarkMode" >> ~/.config/chrome-flags.conf
 echo "--force-dark-mode" >> ~/.config/chrome-flags.conf
@@ -72,7 +72,7 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 
 wget -O ~/.oh-my-zsh/custom/themes/pi.zsh-theme https://raw.githubusercontent.com/k7vinilstorage/Arch-zsh-theme/master/pi.zsh-theme
 
-echo "alias yay-clean="yay -Sc && yay -Qtdq | yay -Rns -"" >> ~/.zshrc
+echo "alias yay-clean='yay -Sc && yay -Qtdq | yay -Rns -'" >> ~/.zshrc
 
 echo "Now enable pi theme"
 sleep 5s
