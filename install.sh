@@ -25,6 +25,9 @@ yay -S google-chrome code-marketplace update-grub gdm-settings touchegg --noconf
 echo "--enable-features=WebUIDarkMode" >> ~/.config/chrome-flags.conf
 echo "--force-dark-mode" >> ~/.config/chrome-flags.conf
 
+#Fonts
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+
 #Grub
 echo "now enable OS prober"
 sleep 5s
