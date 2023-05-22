@@ -20,7 +20,7 @@ sudo pacman -S sof-firmware alsa-firmware bluez bluez-libs --noconfirm
 echo "apps"
 
 sudo pacman -S code gnome-boxes gparted zsh discord fuse gcc gdb os-prober cifs-utils neofetch --noconfirm
-yay -S google-chrome code-marketplace update-grub gdm-settings --noconfirm
+yay -S google-chrome code-marketplace update-grub gdm-settings touchegg --noconfirm
 
 echo "--enable-features=WebUIDarkMode" >> ~/.config/chrome-flags.conf
 echo "--force-dark-mode" >> ~/.config/chrome-flags.conf
@@ -73,6 +73,7 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 wget -O ~/.oh-my-zsh/custom/themes/pi.zsh-theme https://raw.githubusercontent.com/k7vinilstorage/Arch-zsh-theme/master/pi.zsh-theme
 
 echo "alias yay-clean='yay -Sc && yay -Qtdq | yay -Rns -'" >> ~/.zshrc
+echo "alias x11-tp='sudo systemctl start touchegg'" >> ~/.zshrc
 
 echo "Now enable pi theme"
 sleep 5s
@@ -90,4 +91,4 @@ echo "Now configure GDM and intall extensions"
 echo "Blur my shell, Caffeine"
 echo "Clipboard History, Dash to dock"
 echo "GSConnect, Quick Settings Audio Panel"
-echo "Tray Icons Reloaded"
+echo "Tray Icons Reloaded, X11 gestures"
