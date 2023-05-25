@@ -10,8 +10,8 @@ echo "Installing yay"
 sudo pacman -S --needed git base-devel --noconfirm && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 cd ~/
 
-#Bluetooth toools + audio formware
-echo "Installing audio formware and bluetooth"
+#Bluetooth toools + audio firmware
+echo "Installing audio firmware and bluetooth"
 
 sudo pacman -S sof-firmware alsa-firmware bluez bluez-libs --noconfirm
 
