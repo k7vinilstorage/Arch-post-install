@@ -22,8 +22,7 @@ echo "apps"
 sudo pacman -S code gnome-boxes gparted zsh discord fuse gcc gdb os-prober cifs-utils neofetch --noconfirm
 yay -S google-chrome code-marketplace update-grub gdm-settings touchegg --noconfirm
 
-echo "--enable-features=WebUIDarkMode" >> ~/.config/chrome-flags.conf
-echo "--force-dark-mode" >> ~/.config/chrome-flags.conf
+dconf write /org/gnome/desktop/interface/color-scheme \'prefer-dark\'
 
 #Fonts
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
