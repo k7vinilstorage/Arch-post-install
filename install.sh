@@ -76,6 +76,8 @@ wget -O ~/.oh-my-zsh/custom/themes/pi.zsh-theme https://raw.githubusercontent.co
 
 echo "alias yay-clean='yay -Sc && yay -Qtdq | yay -Rns -'" >> ~/.zshrc
 echo "alias x11-tp='sudo systemctl start touchegg'" >> ~/.zshrc
+echo "alias jo='echo "burg"'" >> ~/.zshrc
+
 
 echo "Now enable pi theme"
 sleep 5s
