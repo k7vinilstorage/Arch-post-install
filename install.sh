@@ -53,7 +53,7 @@ cd ~/
 rm -rf Arch-Sur
 
 cd ArchSur-icon
-./install.sh -n ArchSur -t orange
+./install.sh -n ArchSur -t orange -b
 cd ~/
 rm -rf ArchSur-icon
 
